@@ -20,7 +20,7 @@ class Mental_Aritmetic_App:
                            relief=GROOVE)
         self.label.grid(column=1, row=0)
         self.label.pack(ipadx=10, ipady=10)
-
+# ss
         # Tasks positions
         self.l1 = Label(font=("Arial", 22), text="", justify='center')
         self.l1.place(x=70, y=100)
