@@ -316,7 +316,7 @@ class Mental_Aritmetic_App:
     # -------------------------------- HELP INFORMATION---------------------------------- #
 
     def help(self):
-        text = "User instructions\n\n" \
+        text = "USER INSTRUCTIONS\n\n" \
                "1. Use the start button to generate 20 tasks.\n\n " \
                "2. The timer on the left corner will start counting 3 minutes.\n\n" \
                "3. Fill your answers in the empty cells and click Enter to move to next.\n\n" \
