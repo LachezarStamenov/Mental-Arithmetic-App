@@ -10,16 +10,14 @@ class Mental_Aritmetic_App:
         self.root = root
         self.sum_total = []
         self.tasks_dictionary = {}
-        self.root.geometry("1200x800+0+0")
+        self.root.geometry("1100x850+0+0")
         self.root.title("Mental Arithmetic")
-        self.root.resizable(width=True, height=True)
+        # self.root.resizable(width=True, height=True)
         self.WORK_MIN = 3
         self.reps = 0
         self.timer = None
         # ----------------------------- TITLE LABEL ------------------------------- #
-        self.label = Label(self.root, text='Summation of two-digit numbers - mix ', bg="#e0e0df",
-                           font=("Arial", 20, "bold"),
-                           relief=GROOVE)
+        self.label = Label(self.root, text='Summation of two-digit numbers - mix ', font=("Arial", 20, "bold"))
         self.label.grid(column=0, row=0, columnspan=16)
 
         # ---------------------------- TASKS POSITIONS ------------------------------- #
@@ -125,7 +123,7 @@ class Mental_Aritmetic_App:
         self.btn_help = tk.Button(text="Help", font=("Arial", 14), bg="#f4f2f4", command=self.help)
         self.btn_help.grid(column=8, row=6)
 
-        self.canvas = Canvas(width=70, height=40, bg='#9ccd28', highlightthickness=0)
+        self.canvas = Canvas(width=70, height=40, bg='#d0d8d2', highlightthickness=0)
         self.timer_text = self.canvas.create_text(35, 20, text="00:00", fill="black", font=("", 15, "bold"))
         self.canvas.grid(column=10, row=1)
 
