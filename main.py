@@ -10,7 +10,7 @@ class Mental_Aritmetic_App:
         self.root = root
         self.sum_total = []
         self.tasks_dictionary = {}
-        self.root.geometry("1100x850+0+0")
+        self.root.geometry("600x600+0+0")
         self.root.title("Mental Arithmetic")
         # self.root.resizable(width=True, height=True)
         self.WORK_MIN = 3
