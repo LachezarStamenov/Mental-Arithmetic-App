@@ -10,105 +10,102 @@ class Mental_Aritmetic_App:
         self.root = root
         self.sum_total = []
         self.tasks_dictionary = {}
-        self.root.geometry("1200x800+0+0")
+        self.root.geometry("400x400+0+0")
         self.root.title("Mental Arithmetic")
-        self.root.resizable(width=True, height=True)
         self.WORK_MIN = 3
         self.reps = 0
         self.timer = None
         # ----------------------------- TITLE LABEL ------------------------------- #
-        self.label = Label(self.root, text='Summation of two-digit numbers - mix ', bg="#e0e0df",
-                           font=("Arial", 20, "bold"),
-                           relief=GROOVE)
+        self.label = Label(self.root, text='Summation of two-digit numbers - mix ', font=("Arial", 18, "bold"))
         self.label.grid(column=0, row=0, columnspan=16)
 
         # ---------------------------- TASKS POSITIONS ------------------------------- #
 
         self.row_label1 = Label(font=("Arial", 18), text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10", justify='center')
         self.row_label1.grid(column=0, row=2)
-        self.l1 = Label(font=("Arial", 18), text="", justify='center')
+        self.l1 = Label(font=("Arial", 16), text="", justify='center')
         self.l1.grid(column=1, row=2)
-        self.l2 = Label(font=("Arial", 18), text="", justify='center')
+        self.l2 = Label(font=("Arial", 16), text="", justify='center')
         self.l2.grid(column=2, row=2)
-        self.l3 = Label(font=("Arial", 18), text="", justify='center')
+        self.l3 = Label(font=("Arial", 16), text="", justify='center')
         self.l3.grid(column=3, row=2)
-        self.l4 = Label(font=("Arial", 18), text="", justify='center')
+        self.l4 = Label(font=("Arial", 16), text="", justify='center')
         self.l4.grid(column=4, row=2)
-        self.l5 = Label(font=("Arial", 18), text="", justify='center')
+        self.l5 = Label(font=("Arial", 16), text="", justify='center')
         self.l5.grid(column=5, row=2)
-        self.l6 = Label(font=("Arial", 18), text="", justify='center')
+        self.l6 = Label(font=("Arial", 16), text="", justify='center')
         self.l6.grid(column=6, row=2)
-        self.l7 = Label(font=("Arial", 18), text="", justify='center')
+        self.l7 = Label(font=("Arial", 16), text="", justify='center')
         self.l7.grid(column=7, row=2)
-        self.l8 = Label(font=("Arial", 18), text="", justify='center')
+        self.l8 = Label(font=("Arial", 16), text="", justify='center')
         self.l8.grid(column=8, row=2)
-        self.l9 = Label(font=("Arial", 18), text="", justify='center')
+        self.l9 = Label(font=("Arial", 16), text="", justify='center')
         self.l9.grid(column=9, row=2)
-        self.l10 = Label(font=("Arial", 18), text="", justify='center')
+        self.l10 = Label(font=("Arial", 16), text="", justify='center')
         self.l10.grid(column=10, row=2)
-        self.row_label2 = Label(font=("Arial", 18), text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10", justify='center')
+        self.row_label2 = Label(font=("Arial", 16), text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10", justify='center')
         self.row_label2.grid(column=0, row=4)
-        self.l11 = Label(font=("Arial", 18), text="", justify='center')
+        self.l11 = Label(font=("Arial", 16), text="", justify='center')
         self.l11.grid(column=1, row=4)
-        self.l12 = Label(font=("Arial", 18), text="", justify='center')
+        self.l12 = Label(font=("Arial", 16), text="", justify='center')
         self.l12.grid(column=2, row=4)
-        self.l13 = Label(font=("Arial", 18), text="", justify='center')
+        self.l13 = Label(font=("Arial", 16), text="", justify='center')
         self.l13.grid(column=3, row=4)
-        self.l14 = Label(font=("Arial", 18), text="", justify='center')
+        self.l14 = Label(font=("Arial", 16), text="", justify='center')
         self.l14.grid(column=4, row=4)
-        self.l15 = Label(font=("Arial", 18), text="", justify='center')
+        self.l15 = Label(font=("Arial", 16), text="", justify='center')
         self.l15.grid(column=5, row=4)
-        self.l16 = Label(font=("Arial", 18), text="", justify='center')
+        self.l16 = Label(font=("Arial", 16), text="", justify='center')
         self.l16.grid(column=6, row=4)
-        self.l17 = Label(font=("Arial", 18), text="", justify='center')
+        self.l17 = Label(font=("Arial", 16), text="", justify='center')
         self.l17.grid(column=7, row=4)
-        self.l18 = Label(font=("Arial", 18), text="", justify='center')
+        self.l18 = Label(font=("Arial", 16), text="", justify='center')
         self.l18.grid(column=8, row=4)
-        self.l19 = Label(font=("Arial", 18), text="", justify='center')
+        self.l19 = Label(font=("Arial", 16), text="", justify='center')
         self.l19.grid(column=9, row=4)
-        self.l20 = Label(font=("Arial", 18), text="", justify='center')
+        self.l20 = Label(font=("Arial", 16), text="", justify='center')
         self.l20.grid(column=10, row=4)
 
         # ---------------------------- ENTRY BUTTONS ------------------------------- #
-        self.en1 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en1 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en1.grid(column=1, row=3)
-        self.en2 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en2 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en2.grid(column=2, row=3)
-        self.en3 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en3 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en3.grid(column=3, row=3)
-        self.en4 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en4 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en4.grid(column=4, row=3)
-        self.en5 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en5 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en5.grid(column=5, row=3)
-        self.en6 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en6 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en6.grid(column=6, row=3)
-        self.en7 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en7 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en7.grid(column=7, row=3)
-        self.en8 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en8 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en8.grid(column=8, row=3)
-        self.en9 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en9 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en9.grid(column=9, row=3)
-        self.en10 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en10 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en10.grid(column=10, row=3)
-        self.en11 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en11 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en11.grid(column=1, row=5)
-        self.en12 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en12 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en12.grid(column=2, row=5)
-        self.en13 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en13 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en13.grid(column=3, row=5)
-        self.en14 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en14 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en14.grid(column=4, row=5)
-        self.en15 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en15 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en15.grid(column=5, row=5)
-        self.en16 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en16 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en16.grid(column=6, row=5)
-        self.en17 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en17 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en17.grid(column=7, row=5)
-        self.en18 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en18 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en18.grid(column=8, row=5)
-        self.en19 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en19 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en19.grid(column=9, row=5)
-        self.en20 = Entry(width=8, font='arial 15', bd=7, relief=GROOVE)
+        self.en20 = Entry(width=7, font='arial 14', bd=7, relief=GROOVE)
         self.en20.grid(column=10, row=5)
 
         # ------------------------------- BUTTONS -------------------------------------- #
@@ -125,7 +122,7 @@ class Mental_Aritmetic_App:
         self.btn_help = tk.Button(text="Help", font=("Arial", 14), bg="#f4f2f4", command=self.help)
         self.btn_help.grid(column=8, row=6)
 
-        self.canvas = Canvas(width=70, height=40, bg='#9ccd28', highlightthickness=0)
+        self.canvas = Canvas(width=70, height=40, bg='#d0d8d2', highlightthickness=0)
         self.timer_text = self.canvas.create_text(35, 20, text="00:00", fill="black", font=("", 15, "bold"))
         self.canvas.grid(column=10, row=1)
 
@@ -199,95 +196,96 @@ class Mental_Aritmetic_App:
             13: self.sum_total[12], 14: self.sum_total[13], 15: self.sum_total[14], 16: self.sum_total[15],
             17: self.sum_total[16], 18: self.sum_total[17], 19: self.sum_total[18], 20: self.sum_total[19],
         }
-        if int(entries[1]) == answers[1]:
-            self.en1.config(fg='green')
-        else:
-            self.en1.config(fg='red')
-        if int(entries[2]) == answers[2]:
-            self.en2.config(fg='green')
-        else:
-            self.en2.config(fg='red')
-        if int(entries[3]) == answers[3]:
-            self.en3.config(fg='green')
-        else:
-            self.en3.config(fg='red')
-        if int(entries[4]) == answers[4]:
-            self.en4.config(fg='green')
-        else:
-            self.en4.config(fg='red')
-        if int(entries[5]) == answers[5]:
-            self.en5.config(fg='green')
-        else:
-            self.en5.config(fg='red')
-        if int(entries[6]) == answers[6]:
-            self.en6.config(fg='green')
-        else:
-            self.en6.config(fg='red')
-        if int(entries[7]) == answers[7]:
-            self.en7.config(fg='green')
-        else:
-            self.en7.config(fg='red')
-        if int(entries[8]) == answers[8]:
-            self.en8.config(fg='green')
-        else:
-            self.en8.config(fg='red')
-        if int(entries[9]) == answers[9]:
-            self.en9.config(fg='green')
-        else:
-            self.en9.config(fg='red')
-        if int(entries[10]) == answers[10]:
-            self.en10.config(fg='green')
-        else:
-            self.en10.config(fg='red')
-        if int(entries[11]) == answers[11]:
-            self.en11.config(fg='green')
-        else:
-            self.en11.config(fg='red')
-        if int(entries[12]) == answers[12]:
-            self.en12.config(fg='green')
-        else:
-            self.en12.config(fg='red')
-        if int(entries[13]) == answers[13]:
-            self.en13.config(fg='green')
-        else:
-            self.en13.config(fg='red')
-        if int(entries[14]) == answers[14]:
-            self.en14.config(fg='green')
-        else:
-            self.en14.config(fg='red')
-        if int(entries[15]) == answers[15]:
-            self.en15.config(fg='green')
-        else:
-            self.en15.config(fg='red')
-        if int(entries[16]) == answers[16]:
-            self.en16.config(fg='green')
-        else:
-            self.en16.config(fg='red')
-        if int(entries[17]) == answers[17]:
-            self.en17.config(fg='green')
-        else:
-            self.en17.config(fg='red')
-        if int(entries[18]) == answers[18]:
-            self.en18.config(fg='green')
-        else:
-            self.en18.config(fg='red')
-        if int(entries[19]) == answers[19]:
-            self.en19.config(fg='green')
-        else:
-            self.en19.config(fg='red')
-        if int(entries[20]) == answers[20]:
-            self.en20.config(fg='green')
-        else:
-            self.en20.config(fg='red')
+        try:
+            if int(entries[1]) == answers[1]:
+                self.en1.config(fg='green')
+            else:
+                self.en1.config(fg='red')
+            if int(entries[2]) == answers[2]:
+                self.en2.config(fg='green')
+            else:
+                self.en2.config(fg='red')
+            if int(entries[3]) == answers[3]:
+                self.en3.config(fg='green')
+            else:
+                self.en3.config(fg='red')
+            if int(entries[4]) == answers[4]:
+                self.en4.config(fg='green')
+            else:
+                self.en4.config(fg='red')
+            if int(entries[5]) == answers[5]:
+                self.en5.config(fg='green')
+            else:
+                self.en5.config(fg='red')
+            if int(entries[6]) == answers[6]:
+                self.en6.config(fg='green')
+            else:
+                self.en6.config(fg='red')
+            if int(entries[7]) == answers[7]:
+                self.en7.config(fg='green')
+            else:
+                self.en7.config(fg='red')
+            if int(entries[8]) == answers[8]:
+                self.en8.config(fg='green')
+            else:
+                self.en8.config(fg='red')
+            if int(entries[9]) == answers[9]:
+                self.en9.config(fg='green')
+            else:
+                self.en9.config(fg='red')
+            if int(entries[10]) == answers[10]:
+                self.en10.config(fg='green')
+            else:
+                self.en10.config(fg='red')
+            if int(entries[11]) == answers[11]:
+                self.en11.config(fg='green')
+            else:
+                self.en11.config(fg='red')
+            if int(entries[12]) == answers[12]:
+                self.en12.config(fg='green')
+            else:
+                self.en12.config(fg='red')
+            if int(entries[13]) == answers[13]:
+                self.en13.config(fg='green')
+            else:
+                self.en13.config(fg='red')
+            if int(entries[14]) == answers[14]:
+                self.en14.config(fg='green')
+            else:
+                self.en14.config(fg='red')
+            if int(entries[15]) == answers[15]:
+                self.en15.config(fg='green')
+            else:
+                self.en15.config(fg='red')
+            if int(entries[16]) == answers[16]:
+                self.en16.config(fg='green')
+            else:
+                self.en16.config(fg='red')
+            if int(entries[17]) == answers[17]:
+                self.en17.config(fg='green')
+            else:
+                self.en17.config(fg='red')
+            if int(entries[18]) == answers[18]:
+                self.en18.config(fg='green')
+            else:
+                self.en18.config(fg='red')
+            if int(entries[19]) == answers[19]:
+                self.en19.config(fg='green')
+            else:
+                self.en19.config(fg='red')
+            if int(entries[20]) == answers[20]:
+                self.en20.config(fg='green')
+            else:
+                self.en20.config(fg='red')
+        except:
+            print("error")
 
-        # ---------------------------- TIMER MECHANISM ----------------------------------- #
+        # ---------------------------- TIMER ----------------------------------- #
 
     def start_timer(self):
         self.reps += 1
         self.work_sec = self.WORK_MIN * 60
         self.count_down(self.work_sec)
-
-        # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
     def count_down(self, count):
 
